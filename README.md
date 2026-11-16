@@ -6,7 +6,7 @@ One place for everything I do online.
 
 ## Features
 
-No backend, database or APIs used with centralized link and c
+No backend, database or APIs used. Native sharing and clipboard support.
 
 ## Socials
 
