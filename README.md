@@ -18,6 +18,7 @@ No backend, database or APIs used with centralized link and c
 - Discord
 - Instagram - Pvt
 - Instagram - Creative
+- Spotify
 
 ## Deployment
 
