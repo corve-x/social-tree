@@ -6,7 +6,7 @@ export function Footer() {
     <Item as="footer" className="mt-auto pt-14 text-center">
       <p className="text-[13px] text-sub">{profile.footer}</p>
       <p className="mt-1 font-mono text-[11px] text-sub">
-        © {new Date().getFullYear()} {profile.name}
+        © {new Date().getFullYear()} corve-x
       </p>
     </Item>
   );
