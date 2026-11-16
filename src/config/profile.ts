@@ -1,0 +1,125 @@
+export type IconKey =
+  | "linkedin"
+  | "github"
+  | "fiverr"
+  | "discord"
+  | "instagram"
+  | "portfolio-work"
+  | "portfolio-edit";
+export type DetailIcon = "education" | "code" | "motion" | "location";
+
+export interface SocialLink {
+  id: string;
+  platform: string;
+  handle?: string;
+  description: string;
+  url: string;
+  icon: IconKey;
+  brand: string;
+  isPrivate?: boolean; //pvt indicator
+}
+
+export interface ProfileConfig {
+  name: string;
+  initials: string;
+  username: string;
+  title: string;
+  bio: string;
+  location: string;
+  avatar: string;
+  details: { icon: DetailIcon; label: string }[];
+  links: SocialLink[];
+  footer: string;
+}
+
+export const profile: ProfileConfig = {
+  name: "Satyaprasad Nayak",
+  initials: "SPN",
+  username: "@spn.fx",
+  title: "Developer & Visual Creative",
+  bio: "Computer Science student, developer, motion graphics enthusiast.",
+  location: "Bengaluru, India",
+  avatar: "/images/profile.png",
+  details: [
+    { icon: "education", label: "Computer Science" },
+    { icon: "code", label: "Developer" },
+    { icon: "motion", label: "Video Editor" },
+    { icon: "location", label: "Bengaluru, India" },
+  ],
+  links: [
+    {
+      id: "portfolio-work",
+      platform: "Portfolio - Work",
+      description: "Projects, skills & experience",
+      url: "https://example.com/work",
+      icon: "portfolio-work",
+      brand: "#94A3B8",
+    },
+    {
+      id: "portfolio-edit",
+      platform: "Portfolio - Edit",
+      description: "Video editing, visuals & graphics",
+      url: "https://example.com/edit",
+      icon: "portfolio-edit",
+      brand: "#D97757",
+    },
+    {
+      id: "linkedin",
+      platform: "LinkedIn",
+      description: "Professional journey & connections",
+      url: "https://www.linkedin.com/in/satyaprasad-nayak/",
+      icon: "linkedin",
+      brand: "#0A66C2",
+    },
+    {
+      id: "github",
+      platform: "GitHub",
+      description: "Projects, code & experiments",
+      url: "https://github.com/corve-x",
+      icon: "github",
+      brand: "#F4F4F5",
+    },
+    {
+      id: "fiverr",
+      platform: "Fiverr",
+      description: "Freelance editing & creative services",
+      url: "https://www.fiverr.com/sellers/sathyapn/",
+      icon: "fiverr",
+      brand: "#1DBF73",
+    },
+    {
+      id: "discord",
+      platform: "Discord",
+      description: "Connect, chat and fun",
+      url: "https://discord.com/users/718136910832205886",
+      icon: "discord",
+      brand: "#5865F2",
+    },
+    {
+      id: "instagram",
+      platform: "Instagram - Pvt",
+      handle: "@spn.fx",
+      description: "Personal life, everything in between",
+      url: "https://www.instagram.com/spn.fx/",
+      icon: "instagram",
+      brand: "#E4405F",
+      isPrivate: false, //if needed
+    },
+    {
+      id: "instagram-creative",
+      platform: "Instagram - Creative",
+      handle: "@corvex.aep",
+      description: "Video editing/ showcase",
+      url: "https://www.instagram.com/corvex.aep/",
+      icon: "instagram",
+      brand: "#E4405F",
+    },
+  ],
+  footer: "Built by Satya.",
+};
+
+export const site = {
+  title: "Satyaprasad Nayak — Developer & Visual Creative",
+  description:
+    "Explore the projects, social profiles, and creative work of Satyaprasad Nayak.",
+};

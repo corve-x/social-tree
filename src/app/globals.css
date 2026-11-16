@@ -1,0 +1,289 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background: #09090b;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #09090b;
+  color: #f4f4f5;
+  font-family: var(--font-geist-sans), Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(192, 192, 192, 0.25);
+}
+
+:focus-visible {
+  outline: 1px solid #c0c0c0;
+  outline-offset: 3px;
+}
+
+@layer components {
+  .social-card {
+    --brand: #c0c0c0;
+    border: 1px solid #27272a;
+    background: rgba(18, 18, 20, 0.92);
+    transition:
+      border-color 0.35s ease,
+      background-color 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+  .social-card:hover,
+  .social-card:focus-visible {
+    border-color: color-mix(in srgb, var(--brand) 38%, #52525b);
+    background: rgba(28, 28, 32, 0.96);
+    box-shadow:
+      0 18px 40px -22px rgba(0, 0, 0, 0.9),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+  .social-card .card-icon {
+    transition:
+      color 0.35s ease,
+      border-color 0.35s ease;
+  }
+  .social-card:hover .card-icon,
+  .social-card:focus-visible .card-icon {
+    color: color-mix(in srgb, var(--brand) 70%, #f4f4f5);
+    border-color: color-mix(in srgb, var(--brand) 30%, #27272a);
+  }
+  .social-card .card-arrow {
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      color 0.35s ease;
+  }
+  .social-card:hover .card-arrow,
+  .social-card:focus-visible .card-arrow {
+    transform: translate(2px, -2px);
+    color: #f4f4f5;
+  }
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes bg-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.bg-enter {
+  animation: bg-in 1s ease-out both;
+}
+
+/* Brand-specific hover artwork, kept behind the card content. */
+.platform-motion {
+  position: absolute;
+  z-index: -1;
+  right: 34px;
+  top: 50%;
+  width: 100px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  color: var(--brand);
+  opacity: 0;
+  transform: translate(8px, -50%);
+  transition:
+    opacity 0.3s ease,
+    transform 0.35s ease;
+}
+.social-card:is(:hover, :focus-visible) .platform-motion {
+  opacity: 0.32;
+  transform: translate(0, -50%);
+}
+.platform-motion svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.motion-emblem {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+}
+.motion-emblem .motion-logo {
+  width: 28px;
+  height: 28px;
+}
+.motion-ring {
+  position: absolute;
+  inset: 0;
+  border: 1px dashed currentColor;
+  border-radius: 50%;
+}
+.motion-dots {
+  position: absolute;
+  bottom: -3px;
+  display: flex;
+  gap: 3px;
+}
+.motion-dots i {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.social-card:is(:hover, :focus-visible) .platform-motion--discord .motion-logo {
+  animation: clyde-load 1.8s ease-in-out infinite;
+}
+.social-card:is(:hover, :focus-visible) .motion-dots i {
+  animation: dot-load 1s ease-in-out infinite;
+}
+.motion-dots i:nth-child(2) {
+  animation-delay: 0.15s !important;
+}
+.motion-dots i:nth-child(3) {
+  animation-delay: 0.3s !important;
+}
+.social-card:is(:hover, :focus-visible) .motion-ring {
+  animation: ring-load 2s linear infinite;
+}
+.social-card:is(:hover, :focus-visible)
+  .platform-motion--instagram
+  .motion-logo {
+  animation: shutter-load 1.8s ease-in-out infinite;
+}
+.social-card:is(:hover, :focus-visible) .platform-motion--fiverr .motion-logo {
+  animation: logo-pulse 1.8s ease-in-out infinite;
+}
+.motion-trace {
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+}
+.social-card:is(:hover, :focus-visible) .motion-trace {
+  animation: trace-load 2s ease infinite;
+}
+.social-card:is(:hover, :focus-visible) .motion-node {
+  animation: dot-load 1.4s ease-in-out infinite;
+}
+.social-card:is(:hover, :focus-visible) .motion-playhead {
+  animation: timeline-scan 2s ease-in-out infinite;
+}
+@keyframes timeline-scan {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(66px);
+  }
+}
+@keyframes clyde-load {
+  0%,
+  100% {
+    transform: rotate(-12deg) translateY(0);
+  }
+  35% {
+    transform: rotate(12deg) translateY(-5px);
+  }
+  70% {
+    transform: rotate(-6deg) translateY(1px);
+  }
+}
+@keyframes dot-load {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes ring-load {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes shutter-load {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  48% {
+    transform: scale(0.75);
+  }
+  56% {
+    transform: scale(1.15);
+  }
+}
+@keyframes logo-pulse {
+  0%,
+  100% {
+    transform: scale(0.85);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+@keyframes trace-load {
+  0% {
+    stroke-dashoffset: 180;
+  }
+  65%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@media (max-width: 480px) {
+  .platform-motion {
+    right: 22px;
+    width: 65px;
+  }
+  .social-card:is(:hover, :focus-visible) .platform-motion {
+    opacity: 0.15;
+  }
+}
+@media (hover: none) {
+  .social-card:not(:active):not(:focus-visible) .platform-motion {
+    opacity: 0;
+  }
+}
+
+/* Lightweight touch-device motion: a slow, tiny float on the avatar. */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+@media (hover: none) {
+  .avatar-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
