@@ -22,4 +22,4 @@ No backend, database or APIs used with centralized link and c
 
 ## Deployment
 
-The project is designed to be deployed on Vercel, you can check out the website here:
+The project is designed to be deployed on Vercel, you can check out the website here: https://social-tree-spn.vercel.app/
