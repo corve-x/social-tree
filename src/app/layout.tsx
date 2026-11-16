@@ -12,16 +12,46 @@ const baseUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
+
   title: site.title,
   description: site.description,
+
+  applicationName: "Social Tree",
+
   authors: [{ name: profile.name }],
+  creator: profile.name,
+  publisher: profile.name,
+
+  keywords: [
+    "Satyaprasad Nayak",
+    "Developer",
+    "Video Editor",
+    "Motion Graphics",
+    "Portfolio",
+    "PES University",
+    "Social Links",
+  ],
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
   openGraph: {
     type: "profile",
     title: site.title,
     description: site.description,
     siteName: profile.name,
     url: "/",
+    locale: "en_IN",
+    firstName: "Satyaprasad",
+    lastName: "Nayak",
   },
+
   twitter: {
     card: "summary_large_image",
     title: site.title,

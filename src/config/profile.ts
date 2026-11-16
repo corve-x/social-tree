@@ -5,7 +5,8 @@ export type IconKey =
   | "discord"
   | "instagram"
   | "portfolio-work"
-  | "portfolio-edit";
+  | "portfolio-edit"
+  | "spotify";
 export type DetailIcon = "education" | "code" | "motion" | "location";
 
 export interface SocialLink {
@@ -31,6 +32,12 @@ export interface ProfileConfig {
   links: SocialLink[];
   footer: string;
 }
+export const featuredTrack = {
+  title: "Reflections",
+  artist: "The Neighbourhood",
+  artwork: "/images/album.jpg",
+  url: "https://open.spotify.com/track/2xql0pid3EUwW38AsywxhV?si=d62768d74d614a34",
+};
 
 export const profile: ProfileConfig = {
   name: "Satyaprasad Nayak",
@@ -113,6 +120,14 @@ export const profile: ProfileConfig = {
       url: "https://www.instagram.com/corvex.aep/",
       icon: "instagram",
       brand: "#E4405F",
+    },
+    {
+      id: "spotify",
+      platform: "Spotify",
+      description: "My music taste & curated playlists",
+      url: "https://open.spotify.com/user/sajy9meiccv4cnw6ca4sn6eo4",
+      icon: "spotify",
+      brand: "#1DB954",
     },
   ],
   footer: "Built by Satya.",

@@ -43,6 +43,19 @@ function Discord({ className }: P) {
   );
 }
 
+function Spotify({ className }: P) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm5.5 17.3a.75.75 0 0 1-1 .25c-2.8-1.7-6.3-2.1-10.4-1.2a.75.75 0 1 1-.33-1.46c4.5-1.03 8.4-.55 11.48 1.33a.75.75 0 0 1 .25 1.08zm1.47-3.27a.94.94 0 0 1-1.29.31c-3.2-1.97-8.08-2.54-11.85-1.4a.94.94 0 0 1-.55-1.8c4.31-1.3 9.69-.67 13.38 1.6a.94.94 0 0 1 .31 1.29zm.12-3.4C15.25 8.35 8.9 8.14 5.23 9.25a1.13 1.13 0 0 1-.65-2.16c4.24-1.29 11.23-1.04 15.65 1.58a1.13 1.13 0 0 1-1.14 1.95z" />
+    </svg>
+  );
+}
+
 export function PlatformIcon({ name, className }: { name: IconKey } & P) {
   const cls = className ?? "h-[18px] w-[18px]";
   switch (name) {
@@ -60,5 +73,7 @@ export function PlatformIcon({ name, className }: { name: IconKey } & P) {
       return <Fiverr className={cls} />;
     case "discord":
       return <Discord className={cls} />;
+    case "spotify":
+      return <Spotify className={cls} />;
   }
 }
