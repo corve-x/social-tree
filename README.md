@@ -1,6 +1,6 @@
 # spn.fx — Personal Link Hub
 
-Basic and simple personal link hub built with Next.js, TypeScript, Tailwind CSS, Framer Motion and Three.js which is a mobile-first build.
+Basic and simple well-planned personal link hub built with Next.js, TypeScript, Tailwind CSS, Framer Motion and Three.js which is a mobile-first build.
 
 One place for everything I do online.
 

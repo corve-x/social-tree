@@ -29,7 +29,7 @@ export function Avatar({
   const rotateY = useSpring(useTransform(px, [-0.5, 0.5], [-9, 9]), spring);
   const rotateX = useSpring(useTransform(py, [-0.5, 0.5], [9, -9]), spring);
 
-  // Desktop only: tilt follows the mouse anywhere on the page, gently.
+  // Desktop only (for tilt)
   useEffect(() => {
     if (reduce) return;
     const onMove = (e: PointerEvent) => {
@@ -61,7 +61,7 @@ export function Avatar({
         style={{ rotateX, rotateY, transformPerspective: 800 }}
         className="relative h-32 w-32 rounded-full p-px shadow-[0_24px_44px_-16px_rgba(0,0,0,0.9)] sm:h-[136px] sm:w-[136px]"
       >
-        {/* Thin metallic border */}
+        {/* thin metallic border */}
         <span
           aria-hidden="true"
           className="absolute inset-0 rounded-full"
