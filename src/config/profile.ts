@@ -134,7 +134,7 @@ export const profile: ProfileConfig = {
 };
 
 export const site = {
-  title: "Satyaprasad Nayak — Developer & Visual Creative",
+  title: "Satyaprasad Nayak — Socials",
   description:
     "Explore the projects, social profiles, and creative work of Satyaprasad Nayak.",
 };
