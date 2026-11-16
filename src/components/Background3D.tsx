@@ -3,7 +3,6 @@
 import dynamic from "next/dynamic";
 import { Component, useEffect, useState, type ReactNode } from "react";
 
-// Heavy 3D code is only fetched on the client, after first paint.
 const Scene = dynamic(() => import("./BackgroundScene"), { ssr: false });
 
 class Boundary extends Component<
