@@ -135,6 +135,5 @@ export const profile: ProfileConfig = {
 
 export const site = {
   title: "Satyaprasad Nayak — Socials",
-  description:
-    "Explore the projects, social profiles, and creative work of Satyaprasad Nayak.",
+  description: "Explore my portfolios and socials.",
 };
