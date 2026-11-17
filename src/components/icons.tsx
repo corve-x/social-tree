@@ -1,4 +1,11 @@
-import { Github, Instagram, Linkedin, Code2, Film } from "lucide-react";
+import {
+  Github,
+  Instagram,
+  Linkedin,
+  Code2,
+  Film,
+  ShoppingBag,
+} from "lucide-react";
 import type { IconKey } from "@/config/profile";
 
 type P = { className?: string };
@@ -75,5 +82,7 @@ export function PlatformIcon({ name, className }: { name: IconKey } & P) {
       return <Discord className={cls} />;
     case "spotify":
       return <Spotify className={cls} />;
+    case "payhip":
+      return <ShoppingBag className={cls} strokeWidth={1.7} />;
   }
 }

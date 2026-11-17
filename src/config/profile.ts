@@ -6,7 +6,8 @@ export type IconKey =
   | "instagram"
   | "portfolio-work"
   | "portfolio-edit"
-  | "spotify";
+  | "spotify"
+  | "payhip";
 export type DetailIcon = "education" | "code" | "motion" | "location";
 
 export interface SocialLink {
@@ -37,6 +38,10 @@ export const featuredTrack = {
   artist: "The Neighbourhood",
   artwork: "/images/album.jpg",
   url: "https://open.spotify.com/track/2xql0pid3EUwW38AsywxhV?si=d62768d74d614a34",
+};
+
+export const spotify = {
+  url: "https://open.spotify.com/user/sajy9meiccv4cnw6ca4sn6eo4",
 };
 
 export const profile: ProfileConfig = {
@@ -123,16 +128,25 @@ export const profile: ProfileConfig = {
       icon: "instagram",
       brand: "#E4405F",
     },
-    {
-      id: "spotify",
-      platform: "Spotify",
-      description: "My music taste & curated playlists",
-      url: "https://open.spotify.com/user/sajy9meiccv4cnw6ca4sn6eo4",
-      icon: "spotify",
-      brand: "#1DB954",
-    },
+    // {
+    //   id: "spotify",
+    //   platform: "Spotify",
+    //   description: "My music taste & curated playlists",
+    //   url: "https://open.spotify.com/user/sajy9meiccv4cnw6ca4sn6eo4",
+    //   icon: "spotify",
+    //   brand: "#1DB954",
+    // }, //updated the spotify placement
   ],
   footer: "Built by Satya.",
+};
+
+export const store: SocialLink = {
+  id: "payhip",
+  platform: "Payhip",
+  description: "Project files & creative assets",
+  url: "https://payhip.com/corvex",
+  icon: "payhip",
+  brand: "#8B5CF6",
 };
 
 export const site = {
