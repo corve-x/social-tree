@@ -31,19 +31,22 @@ export default function Home() {
             <FeaturedTrack />
           </Item>
 
-          <section className="mt-9">
-            <h2 className="mb-3 font-mono text-[11px] uppercase tracking-wider text-sub">
-              Portfolios
-            </h2>
+          {/* used condition for portfolios temporarily */}
+          {portfolios.length > 0 && (
+            <section className="mt-9">
+              <h2 className="mb-3 font-mono text-[11px] uppercase tracking-wider text-sub">
+                Portfolios
+              </h2>
 
-            <ul className="flex flex-col gap-3">
-              {portfolios.map((link) => (
-                <Item as="li" key={link.id}>
-                  <SocialLinkCard link={link} />
-                </Item>
-              ))}
-            </ul>
-          </section>
+              <ul className="flex flex-col gap-3">
+                {portfolios.map((link) => (
+                  <Item as="li" key={link.id}>
+                    <SocialLinkCard link={link} />
+                  </Item>
+                ))}
+              </ul>
+            </section>
+          )}
 
           <section className="mt-8">
             <h2 className="mb-3 font-mono text-[11px] uppercase tracking-wider text-sub">

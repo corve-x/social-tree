@@ -59,22 +59,23 @@ export const profile: ProfileConfig = {
     { icon: "location", label: "Bengaluru, India" },
   ],
   links: [
-    {
-      id: "portfolio-work",
-      platform: "Portfolio - Work",
-      description: "Projects, skills & experience",
-      url: "/coming-soon",
-      icon: "portfolio-work",
-      brand: "#94A3B8",
-    },
-    {
-      id: "portfolio-edit",
-      platform: "Portfolio - Edit",
-      description: "Video editing, visuals & graphics",
-      url: "/coming-soon",
-      icon: "portfolio-edit",
-      brand: "#D97757",
-    },
+    //removed portfolios temporarily - used condition in page file for the 'Portfolio' text
+    // {
+    //   id: "portfolio-work",
+    //   platform: "Portfolio - Work",
+    //   description: "Projects, skills & experience",
+    //   url: "/coming-soon",
+    //   icon: "portfolio-work",
+    //   brand: "#94A3B8",
+    // },
+    // {
+    //   id: "portfolio-edit",
+    //   platform: "Portfolio - Edit",
+    //   description: "Video editing, visuals & graphics",
+    //   url: "/coming-soon",
+    //   icon: "portfolio-edit",
+    //   brand: "#D97757",
+    // },
     {
       id: "linkedin",
       platform: "LinkedIn",
