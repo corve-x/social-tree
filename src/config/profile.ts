@@ -42,11 +42,11 @@ export const featuredTrack = {
 export const profile: ProfileConfig = {
   name: "Satyaprasad Nayak",
   initials: "SPN",
-  username: "@spn.fx",
+  username: "ig: @spn.fx",
   title: "Developer & Visual Creative",
   bio: "Computer Science student, developer, motion graphics enthusiast.",
   location: "Bengaluru, India",
-  avatar: "/images/profile.png",
+  avatar: "/images/profile-zoomed.png",
   details: [
     { icon: "education", label: "Computer Science" },
     { icon: "code", label: "Developer" },
@@ -81,6 +81,7 @@ export const profile: ProfileConfig = {
     {
       id: "github",
       platform: "GitHub",
+      handle: "corve-x",
       description: "Projects, code & experiments",
       url: "https://github.com/corve-x",
       icon: "github",
@@ -89,6 +90,7 @@ export const profile: ProfileConfig = {
     {
       id: "fiverr",
       platform: "Fiverr",
+      handle: "sathyapn",
       description: "Freelance editing & creative services",
       url: "https://www.fiverr.com/sellers/sathyapn/",
       icon: "fiverr",
@@ -102,16 +104,16 @@ export const profile: ProfileConfig = {
       icon: "discord",
       brand: "#5865F2",
     },
-    {
-      id: "instagram",
-      platform: "Instagram - Pvt",
-      handle: "@spn.fx",
-      description: "Personal life, everything in between",
-      url: "https://www.instagram.com/spn.fx/",
-      icon: "instagram",
-      brand: "#E4405F",
-      isPrivate: false, //if needed
-    },
+    // {
+    //   id: "instagram",
+    //   platform: "Instagram - Pvt",
+    //   handle: "@spn.fx",
+    //   description: "Personal life, everything in between",
+    //   url: "https://www.instagram.com/spn.fx/",
+    //   icon: "instagram",
+    //   brand: "#E4405F",
+    //   isPrivate: false, //if needed
+    // },
     {
       id: "instagram-creative",
       platform: "Instagram - Creative",
